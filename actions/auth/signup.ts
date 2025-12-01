@@ -25,8 +25,8 @@ export const handleSignupSubmit = async (inputValues: {
     const data: ISignUpData = {
       formIdentifier: 'users',
       authData: [
-        { marker: 'email', value: inputValues.email },
-        { marker: 'password', value: inputValues.password },
+        { marker: 'email', value: inputValues.email},
+        { marker: 'password', value: inputValues.password},
       ],
       formData: [{ marker: 'name', type: 'string', value: inputValues.name }],
       notificationData: {
