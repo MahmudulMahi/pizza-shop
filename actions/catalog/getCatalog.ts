@@ -8,7 +8,9 @@ export const getCatalogs = async (): Promise<IPagesEntity[]> => {
     const apiClient = await fetchApiClient();
     const pages = await apiClient?.Pages.getRootPages('en_US');
 
-
+    const catalogPages = pages?.filter(
+      (page: { type: string }) => page.type === 'catalog_page'
+    );
 
     // Always return an array
     return catalogPages?.length ? catalogPages : [];
