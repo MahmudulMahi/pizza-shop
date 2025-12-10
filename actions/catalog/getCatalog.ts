@@ -5,7 +5,8 @@ import { IPagesEntity } from 'oneentry/dist/pages/pagesInterfaces';
 
 export const getCatalogs = async (): Promise<IPagesEntity[]> => {
   try {
-
+    const apiClient = await fetchApiClient();
+    const pages = await apiClient?.Pages.getRootPages('en_US');
 
     const catalogPages = pages?.filter(
       (page: { type: string }) => page.type === 'catalog_page'
