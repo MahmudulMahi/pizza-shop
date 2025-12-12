@@ -8,5 +8,14 @@ export const getProductDetails = async (productId: number) => {
     throw new Error('Product ID is required.');
   }
 
-
+  try {
+    const product = await apiClient?.Products.getProductById(
+      productId,
+      'en_US'
+    );
+    return product;
+  } catch (error) {
+    console.error('Failed to fetch product:', error);
+    throw new Error('Failed to fetch product.');
+  }
 };
