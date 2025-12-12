@@ -10,17 +10,6 @@ export const getRelatedProducts = async (pageId: number, productId: number) => {
   }
 
   try {
-    const products = await apiClient?.Products.getProductsByPageId(
-      pageId,
-      undefined,
-      'en_US',
-      {
-        limit: 5,
-        offset: 0,
-        sortOrder: null,
-        sortKey: null,
-      }
-    );
 
     const relatedProducts = [];
 
