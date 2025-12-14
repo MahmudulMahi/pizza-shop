@@ -35,7 +35,13 @@ export default async function createOrder(
     }
 
     // Create a payment session based on the newly created order
+    const paymentSession = await apiClient.Payments.setAccessToken(
+      accessToken
+    ).createSession(createdOrder.id, 'session');
 
+    if (!paymentSession?.paymentUrl) {
+      throw new Error('Failed to generate payment session URL.');
+    }
 
     // Return the payment URL for user redirection
     return paymentSession.paymentUrl;
