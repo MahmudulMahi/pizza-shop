@@ -33,5 +33,9 @@ export const getRelatedProducts = async (pageId: number, productId: number) => {
       }
     }
 
-
+    return relatedProducts;
+  } catch (error) {
+    console.error('Failed to fetch related products:', error);
+    throw new Error('Failed to fetch related products.');
+  }
 };
