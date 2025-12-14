@@ -9,15 +9,6 @@ export default async function createOrder(
 ): Promise<string> {
   const apiClient = await fetchApiClient();
 
-  if (!apiClient) {
-    throw new Error('Unable to retrieve API instance.');
-  }
-
-  const accessToken = (await cookies()).get('access_token')?.value;
-
-  if (!accessToken) {
-    throw new Error('Missing access token.');
-  }
 
   try {
     // Debug: Log the order data being sent
