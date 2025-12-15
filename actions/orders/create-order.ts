@@ -28,11 +28,6 @@ export default async function createOrder(
       accessToken
     ).createOrder('orders', orderData);
 
-    console.log('Created order response:', createdOrder);
-
-    if (!createdOrder?.id) {
-      throw new Error('Order creation was unsuccessful.');
-    }
 
     // Create a payment session based on the newly created order
     const paymentSession = await apiClient.Payments.setAccessToken(
