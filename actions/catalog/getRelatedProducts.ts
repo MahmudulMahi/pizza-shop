@@ -24,14 +24,7 @@ export const getRelatedProducts = async (pageId: number, productId: number) => {
 
     const relatedProducts = [];
 
-    for (let i = 0; i < products?.total; i++) {
-      if (relatedProducts.length < 4) {
-        if (products?.items[i].id !== productId)
-          relatedProducts.push(products?.items[i]);
-      } else {
-        break;
-      }
-    }
+
 
     return relatedProducts;
   } catch (error) {
