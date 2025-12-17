@@ -189,13 +189,7 @@ function AuthForm() {
                 </div>
               ))}
 
-              {error && (
-                <div className='p-3 xs:p-4 rounded-xl xs:rounded-2xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800'>
-                  <p className='text-red-600 dark:text-red-400 text-center font-medium text-sm xs:text-base'>
-                    {error}
-                  </p>
-                </div>
-              )}
+
 
               <div className='pt-1 xs:pt-2'>
                 <Button
