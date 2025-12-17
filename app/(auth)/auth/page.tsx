@@ -221,7 +221,20 @@ function AuthForm() {
           )}
 
           {/* Toggle form */}
-
+          <div className='mt-6 xs:mt-7 sm:mt-8 flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-2 px-2'>
+            <p className='text-sm xs:text-base sm:text-lg text-gray-600 dark:text-gray-300 text-center'>
+              {isSignUp
+                ? 'Already part of our pizza family?'
+                : 'New to SahandPizza?'}
+            </p>
+            <Button
+              variant='link'
+              className='text-base xs:text-lg sm:text-xl font-bold bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent hover:from-red-700 hover:via-orange-600 hover:to-yellow-600 transition-all duration-200 p-0 h-auto cursor-pointer active:scale-[0.95]'
+              onClick={toggleForm}
+            >
+              {isSignUp ? 'Sign in here' : 'Join us today'}
+            </Button>
+          </div>
         </div>
       </div>
     </div>
