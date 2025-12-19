@@ -197,7 +197,26 @@ function AuthForm() {
                 </div>
               )}
 
-
+              <div className='pt-1 xs:pt-2'>
+                <Button
+                  type='submit'
+                  className='w-full h-12 xs:h-13 sm:h-14 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:from-red-600 hover:via-orange-600 hover:to-yellow-600 text-white text-base xs:text-lg sm:text-xl font-bold rounded-xl xs:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] border-0 cursor-pointer'
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <div className='flex items-center space-x-2'>
+                      <Loader2 className='h-5 w-5 xs:h-6 xs:w-6 animate-spin' />
+                      <span className='text-sm xs:text-base sm:text-lg'>
+                        {isSignUp ? 'Creating Account...' : 'Signing In...'}
+                      </span>
+                    </div>
+                  ) : isSignUp ? (
+                    'Join SahandPizza Family! 🍕'
+                  ) : (
+                    'Welcome Back! 🎉'
+                  )}
+                </Button>
+              </div>
             </form>
           )}
 
