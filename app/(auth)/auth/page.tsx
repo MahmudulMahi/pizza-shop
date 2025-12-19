@@ -172,7 +172,20 @@ function AuthForm() {
                   >
                     {field.localizeInfos.title}
                   </Label>
-
+                  <Input
+                    id={field.marker}
+                    type={field.marker === 'password' ? 'password' : 'text'}
+                    name={field.marker}
+                    className='h-12 xs:h-13 sm:h-14 text-base xs:text-lg rounded-xl xs:rounded-2xl border-2 border-orange-200 dark:border-orange-700 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm hover:border-orange-300 dark:hover:border-orange-600 focus:border-orange-500 dark:focus:border-orange-400 transition-all duration-200 shadow-sm'
+                    placeholder={field.localizeInfos.title}
+                    value={
+                      inputValues[
+                        field.marker as keyof (SignUpFormData & LoginFormData)
+                      ] || ''
+                    }
+                    onChange={handleInputChange}
+                    disabled={isSubmitting}
+                  />
                 </div>
               ))}
 
