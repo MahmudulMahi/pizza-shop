@@ -151,14 +151,7 @@ function AuthForm() {
           {/* Form and loading */}
 
           {isLoading ? (
-            <div className='flex flex-col justify-center items-center h-48 xs:h-56 sm:h-64 space-y-3 xs:space-y-4'>
-              <div className='w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 rounded-xl xs:rounded-2xl bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 flex items-center justify-center'>
-                <Loader2 className='h-6 w-6 xs:h-7 xs:w-7 sm:h-8 sm:w-8 animate-spin text-white' />
-              </div>
-              <p className='text-base xs:text-lg font-semibold bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent text-center'>
-                Loading delicious form...
-              </p>
-            </div>
+  
           ) : (
             <form
               className='space-y-4 xs:space-y-5 sm:space-y-6'
