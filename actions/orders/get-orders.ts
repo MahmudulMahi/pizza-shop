@@ -12,9 +12,7 @@ export const getOrders = async () => {
       throw new Error('Missing access token.');
     }
 
-    const orders = await apiClient?.Orders.setAccessToken(
-      accessToken
-    ).getAllOrdersByMarker('orders');
+ 
 
     return orders;
   } catch (error) {
