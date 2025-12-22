@@ -56,65 +56,7 @@ export default function CartPage() {
   const tax = subtotal * 0.1; // Assuming 10% tax
   const total = subtotal + tax;
 
-  const createOrderAndCheckout = async () => {
-    try {
-      // Get user's name from user session formData
-      let userName = 'Customer';
 
-      if (user?.formData) {
-        // Look for name fields in user's formData
-        const nameField = user.formData.find(
-          (field) =>
-            field.marker === 'name' ||
-            field.marker === 'first_name' ||
-            field.marker === 'full_name'
-        );
-
-        const firstNameField = user.formData.find(
-          (field) => field.marker === 'first_name'
-        );
-        const lastNameField = user.formData.find(
-          (field) => field.marker === 'last_name'
-        );
-
-        if (nameField?.value) {
-          userName = nameField.value;
-        } else if (firstNameField?.value || lastNameField?.value) {
-          userName = `${firstNameField?.value || ''} ${
-            lastNameField?.value || ''
-          }`.trim();
-        }
-      }
-
-      const data = {
-        formIdentifier: 'order_form',
-        paymentAccountIdentifier: 'stripe_payment',
-        formData: [
-          {
-            marker: 'name',
-            value: userName,
-            type: 'string',
-          },
-        ],
-        products: cartItems.map((item) => ({
-          productId: item.id,
-          quantity: item.quantity,
-        })),
-      } as IOrderData;
-
-      console.log('Sending order data:', data);
-      console.log('User name being sent:', userName);
-      console.log('User formData:', user?.formData);
-
-      const url = await createOrder(data);
-      clearCart();
-      router.push(url);
-    } catch (error) {
-      console.error('Checkout error:', error);
-      // You might want to show a toast notification here
-      alert('Failed to process order. Please try again.');
-    }
-  };
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-red-50/30 via-orange-50/20 to-yellow-50/30 dark:from-red-950/10 dark:via-orange-950/10 dark:to-yellow-950/10'>
