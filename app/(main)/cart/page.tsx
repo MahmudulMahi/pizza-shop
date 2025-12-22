@@ -154,7 +154,11 @@ export default function CartPage() {
                   <div className='flex flex-col space-y-4 sm:hidden'>
                     <div className='flex items-center space-x-3'>
                       <div className='relative overflow-hidden rounded-xl bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 p-2 flex-shrink-0'>
-
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className='w-14 h-14 object-cover rounded-lg'
+                        />
                       </div>
                       <div className='flex-1 min-w-0'>
                         <h3 className='text-lg font-bold bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent truncate mb-1'>
