@@ -133,7 +133,15 @@ export default function CartPage() {
           </p>
         </div>
 
-
+        {isLoading ? (
+          <div className='flex justify-center items-center h-64 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-orange-200/50 dark:border-orange-800/50'>
+            <div className='text-center'>
+              <div className='animate-spin rounded-full h-12 w-12 border-4 border-orange-200 border-t-orange-500 mx-auto mb-4'></div>
+              <p className='text-lg font-semibold bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent'>
+                Loading your delicious cart...
+              </p>
+            </div>
+          </div>
         ) : (
           <>
             <div className='space-y-4 sm:space-y-6'>
