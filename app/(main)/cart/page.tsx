@@ -168,7 +168,14 @@ export default function CartPage() {
                           ${item?.price?.toFixed(2)}
                         </p>
                       </div>
- 
+                      <Button
+                        variant='ghost'
+                        size='icon'
+                        onClick={() => removeItem(item.id)}
+                        className='text-red-500 hover:text-red-600 hover:bg-red-100 dark:hover:bg-red-900/30 rounded-xl transition-all duration-200 cursor-pointer h-9 w-9 flex-shrink-0'
+                      >
+                        <Trash2 className='h-4 w-4' />
+                      </Button>
                     </div>
 
                     {/* Mobile Quantity Controls */}
