@@ -179,7 +179,33 @@ export default function CartPage() {
                     </div>
 
                     {/* Mobile Quantity Controls */}
-
+                    <div className='flex items-center justify-center'>
+                      <div className='flex items-center space-x-4 bg-orange-50 dark:bg-orange-950/30 rounded-2xl p-3'>
+                        <Button
+                          size='icon'
+                          onClick={() =>
+                            updateQuantity(item.id, item.quantity - 1)
+                          }
+                          className='bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:from-red-600 hover:via-orange-600 hover:to-yellow-600 text-white cursor-pointer h-10 w-10 rounded-xl'
+                        >
+                          <Minus className='h-5 w-5' />
+                        </Button>
+                        <div className='text-center min-w-[3rem]'>
+                          <span className='text-xl font-bold text-gray-800 dark:text-gray-200'>
+                            {item.quantity}
+                          </span>
+                        </div>
+                        <Button
+                          size='icon'
+                          onClick={() =>
+                            updateQuantity(item.id, item.quantity + 1)
+                          }
+                          className='bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:from-red-600 hover:via-orange-600 hover:to-yellow-600 text-white cursor-pointer h-10 w-10 rounded-xl'
+                        >
+                          <Plus className='h-5 w-5' />
+                        </Button>
+                      </div>
+                    </div>
 
                     {/* Mobile Item Total */}
                     <div className='flex justify-between items-center pt-2 border-t border-orange-200 dark:border-orange-700'>
