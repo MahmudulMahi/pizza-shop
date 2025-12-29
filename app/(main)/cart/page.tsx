@@ -219,64 +219,7 @@ export default function CartPage() {
                   </div>
 
                   {/* Desktop Layout */}
-                  <div className='hidden sm:flex sm:items-center sm:space-x-4'>
-                    <div className='flex items-center space-x-4 flex-1'>
-                      <div className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 p-2'>
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          className='w-20 h-20 object-cover rounded-xl'
-                        />
-                      </div>
-                      <div className='flex-1'>
-                        <h3 className='text-xl font-bold bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent line-clamp-1 mb-1'>
-                          {item.name}
-                        </h3>
-                        <p className='text-gray-600 dark:text-gray-400 font-semibold'>
-                          ${item?.price?.toFixed(2)}
-                        </p>
-                      </div>
-                    </div>
-                    <div className='flex items-center space-x-4'>
-                      <div className='flex items-center space-x-3 bg-orange-50 dark:bg-orange-950/30 rounded-2xl p-2'>
-                        <Button
-                          size='icon'
-                          onClick={() =>
-                            updateQuantity(item.id, item.quantity - 1)
-                          }
-                          className='bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:from-red-600 hover:via-orange-600 hover:to-yellow-600 text-white cursor-pointer h-8 w-8 rounded-xl'
-                        >
-                          <Minus className='h-4 w-4' />
-                        </Button>
-                        <Input
-                          type='number'
-                          min='0'
-                          value={item.quantity}
-                          onChange={(e) =>
-                            updateQuantity(item.id, parseInt(e.target.value))
-                          }
-                          className='w-16 text-center border-orange-200 dark:border-orange-700 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm font-bold text-gray-800 dark:text-gray-200 rounded-xl'
-                        />
-                        <Button
-                          size='icon'
-                          onClick={() =>
-                            updateQuantity(item.id, item.quantity + 1)
-                          }
-                          className='bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 hover:from-red-600 hover:via-orange-600 hover:to-yellow-600 text-white cursor-pointer h-8 w-8 rounded-xl'
-                        >
-                          <Plus className='h-4 w-4' />
-                        </Button>
-                      </div>
-                      <Button
-                        variant='ghost'
-                        size='icon'
-                        onClick={() => removeItem(item.id)}
-                        className='text-red-500 hover:text-red-600 hover:bg-red-100 dark:hover:bg-red-900/30 rounded-2xl transition-all duration-200 cursor-pointer h-10 w-10'
-                      >
-                        <Trash2 className='h-5 w-5' />
-                      </Button>
-                    </div>
-                  </div>
+
                 </div>
               ))}
             </div>
