@@ -208,7 +208,14 @@ export default function CartPage() {
                     </div>
 
                     {/* Mobile Item Total */}
-
+                    <div className='flex justify-between items-center pt-2 border-t border-orange-200 dark:border-orange-700'>
+                      <span className='text-gray-600 dark:text-gray-400 font-medium'>
+                        Item Total:
+                      </span>
+                      <span className='text-lg font-bold bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent'>
+                        ${(item.price * item.quantity).toFixed(2)}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Desktop Layout */}
