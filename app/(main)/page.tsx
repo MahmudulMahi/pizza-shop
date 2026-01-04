@@ -435,18 +435,7 @@ export default function HomePage() {
       </section>
 
       {/* Products Section */}
-      <main className='container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16'>
-        {isLoading && (
-          <div className='flex flex-col justify-center items-center h-48 sm:h-64 space-y-4'>
-            <div className='relative'>
-              <div className='w-12 h-12 sm:w-16 sm:h-16 rounded-full border-4 border-orange-200 dark:border-orange-800'></div>
-              <div className='absolute top-0 left-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full border-4 border-red-500 border-t-transparent animate-spin'></div>
-            </div>
-            <p className='text-base sm:text-lg font-medium text-gray-600 dark:text-gray-300 text-center'>
-              Loading delicious pizzas...
-            </p>
-          </div>
-        )}
+
 
         {products.map((catalog) => (
           <ProductCatalog
