@@ -448,15 +448,7 @@ export default function HomePage() {
           </div>
         )}
 
-        {products.map((catalog) => (
-          <ProductCatalog
-            key={catalog?.id}
-            title={catalog?.localizeInfos?.title as string}
-            products={
-              catalog.catalogProducts.items as unknown as IProductsEntity[]
-            }
-          />
-        ))}
+
       </main>
     </div>
   );
