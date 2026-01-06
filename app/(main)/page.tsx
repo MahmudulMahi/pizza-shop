@@ -364,7 +364,49 @@ export default function HomePage() {
                 dough and fire up our traditional wood-burning ovens.
               </p>
 
+              <div className='space-y-4 sm:space-y-6'>
+                <div className='flex items-center space-x-3 sm:space-x-4'>
+                  <div className='w-10 h-10 sm:w-12 sm:h-12 bg-red-100 dark:bg-red-900/30 rounded-xl sm:rounded-2xl flex items-center justify-center'>
+                    <MapPin className='w-5 h-5 sm:w-6 sm:h-6 text-red-600 dark:text-red-400' />
+                  </div>
+                  <div>
+                    <div className='font-semibold text-sm sm:text-base text-gray-900 dark:text-gray-100'>
+                      123 Pizza Street
+                    </div>
+                    <div className='text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
+                      Downtown, NY 10001
+                    </div>
+                  </div>
+                </div>
 
+                <div className='flex items-center space-x-3 sm:space-x-4'>
+                  <div className='w-10 h-10 sm:w-12 sm:h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl sm:rounded-2xl flex items-center justify-center'>
+                    <Phone className='w-5 h-5 sm:w-6 sm:h-6 text-orange-600 dark:text-orange-400' />
+                  </div>
+                  <div>
+                    <div className='font-semibold text-sm sm:text-base text-gray-900 dark:text-gray-100'>
+                      +1 (555) 123-PIZZA
+                    </div>
+                    <div className='text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
+                      Open 11AM - 11PM Daily
+                    </div>
+                  </div>
+                </div>
+
+                <div className='flex items-center space-x-3 sm:space-x-4'>
+                  <div className='w-10 h-10 sm:w-12 sm:h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-xl sm:rounded-2xl flex items-center justify-center'>
+                    <Mail className='w-5 h-5 sm:w-6 sm:h-6 text-yellow-600 dark:text-yellow-400' />
+                  </div>
+                  <div>
+                    <div className='font-semibold text-sm sm:text-base text-gray-900 dark:text-gray-100'>
+                      hello@sahandpizza.com
+                    </div>
+                    <div className='text-xs sm:text-sm text-gray-600 dark:text-gray-400'>
+                      We&apos;d love to hear from you!
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className='relative mt-8 lg:mt-0'>
