@@ -324,7 +324,30 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-
+      <section className='py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500'>
+        <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center text-white'>
+            {[
+              { icon: Users, number: '50,000+', label: 'Happy Customers' },
+              { icon: Pizza, number: '100,000+', label: 'Pizzas Delivered' },
+              { icon: Award, number: '15+', label: 'Awards Won' },
+              { icon: Clock, number: '5', label: 'Years of Excellence' },
+            ].map((stat, index) => (
+              <div key={index} className='group'>
+                <div className='bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 hover:bg-white/20 transition-all duration-200'>
+                  <stat.icon className='w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 lg:mb-4 group-hover:scale-110 transition-transform duration-200' />
+                  <div className='text-2xl sm:text-3xl lg:text-4xl font-black mb-1 sm:mb-2'>
+                    {stat.number}
+                  </div>
+                  <div className='text-xs sm:text-sm lg:text-lg font-medium opacity-90'>
+                    {stat.label}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Location & Contact Section */}
       <section className='py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-950'>
