@@ -229,61 +229,7 @@ export default function Footer() {
       </div>
 
       {/* Trust Badges */}
-      <div className='relative border-t border-gray-200'>
-        <div className='container mx-auto px-4 py-6 md:py-8'>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center'>
-            {[
-              {
-                icon: Shield,
-                title: 'Safe & Secure',
-                subtitle: 'SSL Protected',
-                bgColor: 'bg-blue-100',
-                iconColor: 'text-blue-600',
-              },
-              {
-                icon: Truck,
-                title: 'Fast Delivery',
-                subtitle: '25-min Average',
-                bgColor: 'bg-green-100',
-                iconColor: 'text-green-600',
-              },
-              {
-                icon: CreditCard,
-                title: 'Easy Payment',
-                subtitle: 'All Cards Accepted',
-                bgColor: 'bg-indigo-100',
-                iconColor: 'text-indigo-600',
-              },
-              {
-                icon: Award,
-                title: 'Quality Assured',
-                subtitle: '100% Fresh',
-                bgColor: 'bg-amber-100',
-                iconColor: 'text-amber-600',
-              },
-            ].map((badge, index) => (
-              <div
-                key={index}
-                className='flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-3'
-              >
-                <div
-                  className={`w-8 h-8 md:w-10 md:h-10 ${badge.bgColor} rounded-xl flex items-center justify-center`}
-                >
-                  <badge.icon
-                    className={`h-4 w-4 md:h-5 md:w-5 ${badge.iconColor}`}
-                  />
-                </div>
-                <div className='text-center md:text-left'>
-                  <p className='text-gray-900 font-medium text-xs md:text-sm'>
-                    {badge.title}
-                  </p>
-                  <p className='text-gray-500 text-xs'>{badge.subtitle}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+
 
       {/* Bottom Bar */}
       <div className='relative border-t border-gray-200 bg-gray-50'>
